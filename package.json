@@ -1,0 +1,14 @@
+{
+  "name": "dungeonmap",
+  "version": "0.0.1",
+  "description": "makes maps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathon Ball",
+  "license": "MIT",
+  "dependencies": {
+    "node-png": "^0.4.3"
+  }
+}
