@@ -2,11 +2,28 @@ const Image = require('./lib/image');
 const Color = require('./lib/color');
 
 var test = new Image({
-    width: 100,
+    width: 120,
     height: 100
 });
 
-test.fill(Color.getPreset('orange'));
-test.rectangle(10,10, 80, 80, Color.getPreset('blue'));
-test.setPixel(50, 50, Color.getPreset('red'));
+var samples = [
+    'red',
+    'orange',
+    'yellow',
+    'chartreuse',
+    'green',
+    'spring',
+    'cyan',
+    'azure',
+    'blue',
+    'violet',
+    'magenta',
+    'rose'
+];
+
+offset = 0;
+samples.forEach((sample) => {
+    test.rectangle(offset, 0, 10, 100, Color.getPreset(sample));
+    offset += 10;
+});
 test.pack('test.png');
