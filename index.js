@@ -6,25 +6,7 @@ var test = new Image({
     height: 100
 });
 
-var orange = new Color({
-    red: 255,
-    green: 165,
-    blue: 0
-});
-
-var blue = new Color({
-    red: 0,
-    green: 0,
-    blue: 255
-});
-
-var red = new Color({
-    red: 255,
-    green: 0,
-    blue: 0
-});
-
-test.fill(orange);
-test.rectangle(10,10, 80, 80, blue);
-test.setPixel(50, 50, red);
+test.fill(Color.getPreset('orange'));
+test.rectangle(10,10, 80, 80, Color.getPreset('blue'));
+test.setPixel(50, 50, Color.getPreset('red'));
 test.pack('test.png');
